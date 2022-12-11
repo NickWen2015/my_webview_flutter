@@ -20,6 +20,7 @@ class _WebViewAppState extends State<WebViewApp> {
 
   late WebViewController _webViewController;
   final _cookieManager = CookieManager();
+  final url = 'https://www.google.com';
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,7 @@ class _WebViewAppState extends State<WebViewApp> {
         title: const Text('Flutter WebView'),
       ),
       body: WebView(
-        initialUrl: 'https://www.google.com',
+        initialUrl: url,
         javascriptMode: JavascriptMode.unrestricted,
         onWebViewCreated: (WebViewController webViewController) {
           _webViewController = webViewController;
